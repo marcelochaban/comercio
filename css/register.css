@@ -1,0 +1,81 @@
+h1{
+    color: rgb(117, 14, 117);
+}
+
+body {
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(15, 9, 9);
+}
+.logo {
+    font-weight: 400;
+    font-size: 1.3rem;
+    height: auto;
+    width: 200px; /* Cambia este valor al ancho deseado */
+     /* Esto mantiene la proporción de aspecto */
+
+}
+#main-container {
+    background-color: rgb(222, 48, 48);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4p white
+}
+
+#register-container {
+    background-color: white;
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4p white
+}
+
+.card-header {
+    text-align: center;
+}
+
+.personal-data, .Account-data {
+    display: inline-block;
+    vertical-align: top; /* Alinea en la parte superior para igualar alturas */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%; /* El ancho es 100% del contenedor */
+}
+
+label {
+    margin-bottom: 1vh;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: purple;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: purple;
+}

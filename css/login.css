@@ -1,0 +1,55 @@
+:root {
+    --fuente: rgb(65, 15, 65);
+}
+
+h1{
+    color:var(--fuente);
+}
+
+.label{
+    font-weight: bold;
+    color:var(--fuente);
+}
+
+body {
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    margin: 2;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(102, 50, 50);
+}
+.login-container{
+    background-color: rgb(238, 217, 125);
+}
+
+
+
+.main-container {
+    background-color: rgb(238, 217, 125);
+    border: 10px solid #000000;
+    background-clip: padding-box;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4p rgb(0, 0, 0)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
