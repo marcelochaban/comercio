@@ -39,6 +39,7 @@ if (isset($_GET['venta_id'])) {
 
 // Cierra la conexión
 $mysqli->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -50,22 +51,15 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmación de Venta</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/confirm.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header-mobile">
-            <h1 class="logo">LibreriaTohmé</h1>
-            <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>
-            </button>
-        </header>
         <main>
-            <h2 class="titulo-principal">Confirmación de Venta</h2>
+            <h2 class="titulo-principal">¡Venta realizada con éxito!</h2>
             <div class="contenedor-confirmacion">
-                <p>¡Venta realizada con éxito!</p>
-                <h3>Datos de la Venta</h3>
+                <h3 class="sub-titulo">Datos de la Venta</h3>
                 <?php
                 // Comprueba si se encontraron productos para la venta
                 if ($result->num_rows > 0) {
@@ -79,9 +73,6 @@ $mysqli->close();
                     echo '</tr>';
                     echo '</thead>';
                     echo '<tbody>';
-
-
-
                     echo '</tbody>';
                     echo '</table>';
                 } else {
@@ -89,16 +80,9 @@ $mysqli->close();
                 }
                 ?>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Precio Unitario</th>
-                            <th>Subtotal</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <?php
+                        $total=0;
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo '<tr>';
@@ -107,15 +91,21 @@ $mysqli->close();
                                 echo '<td>$' . number_format($row['precio_unitario'], 2) . '</td>';
                                 echo '<td>$' . number_format($row['subtotal'], 2) . '</td>';
                                 echo '</tr>';
+                                $total+=$row['subtotal'];
                             }
                         } else {
                             echo 'No se encontraron productos para la venta.';
                         }
                         ?>
-                        }
+                        
                     </tbody>
                 </table>
-                <p>Total: $<!-- Aquí puedes usar PHP para mostrar el total de la venta --></p>
+                <?php
+                echo '<div class="subtexto">';
+                echo "<p> Total: $" . number_format($total, 2) . "</p>";
+                echo '</div>';
+                ?>
+                
                 <a href="./index.php" class="boton-volver">Volver a la Tienda</a>
             </div>
         </main>

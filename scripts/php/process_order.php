@@ -2,8 +2,13 @@
 
 require "connection.php";
 
-$id_cliente = $_COOKIE["clienteID"];
-echo "" . $id_cliente . "";
+if (isset($_COOKIE["clienteID"])) {
+    $id_cliente = $_COOKIE["clienteID"];
+} else {
+    header("Location: ../../index.php");
+
+}
+
 
 // Decodificar el JSON en un array asociativo
 $data = json_decode($_POST['productosEnCarrito'], true);

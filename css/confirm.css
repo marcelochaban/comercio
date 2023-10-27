@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-main: #4b33a8;
+    --clr-main-light: #785ce9;
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Margen arriba y abajo */
+}
+
+table th, table td {
+    border: 1px solid #ccc; /* Borde de las celdas */
+    padding: 1rem; /* Espaciado interno de las celdas */
+    text-align: center; /* Alineación del texto al centro */
+    width: 25%; /* Establecer un ancho fijo para todas las celdas (25% para 4 columnas) */
+}
+
+
+table th {
+    background-color: #f0f0f0; /* Fondo de las celdas de encabezado */
+}
+
+
+table tr td {
+    line-height: 1.2; /* Ajusta la altura de línea según tu preferencia */
+}
+
+
+/* Estilo para el párrafo del total */
+p {
+    font-size: 18px; /* Tamaño de fuente */
+    margin-top: 20px; /* Margen arriba */
+}
+
+
+
+
+main {
+    background-color: var(--clr-white);
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 3rem;
+    
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: var(--clr-main);
+    height: 100vh; /* Establece la altura del wrapper al 100% del viewport */
+}
+
+.titulo-principal {
+    color: var(--clr-main);
+    text-align: center; /* Añadir esta línea para centrar el texto */
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.sub-titulo{
+    text-align: center; /* Añadir esta línea para centrar el texto */
+    margin-bottom:1rem;
+    
+}
+.subtexto{
+    text-align: right;
+}
+
+
+
+
